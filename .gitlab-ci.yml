@@ -16,3 +16,8 @@ build:
   script:
   - docker build -t robotdocker .
   - docker run -e ROBOT_TESTS=/test --rm -v $(pwd)/test:/test robotdocker
+  artifacts:
+    paths:
+    - test/*.xml
+    - test/*.html
+    expire_in: 1 day
