@@ -1,4 +1,5 @@
 test/output.xml
 test/log.html
 test/report.html
+*.swp
 
