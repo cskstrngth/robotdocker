@@ -15,4 +15,4 @@ build:
   stage: build
   script:
   - docker build -t robotdocker .
-  - docker run -e ROBOT_TESTS=/test --rm -v $(pwd)/test:/test -ti robotdocker
+  - docker run -e ROBOT_TESTS=/test --rm -v $(pwd)/test:/test robotdocker
