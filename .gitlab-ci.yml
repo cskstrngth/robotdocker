@@ -14,7 +14,7 @@ before_script:
 build:
   stage: build
   script:
-  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN 192.168.37.131
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://192.168.37.131:80
   - docker build -t 192.168.37.131/joe/robotdocker:latest .
   - docker run -e ROBOT_TESTS=/test --rm -v $(pwd)/test:/test robotdocker
   - docker push 192.168.37.131/joe/robotdocker:latest
